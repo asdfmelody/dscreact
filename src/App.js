@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+import React, {Component, useState}from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+class RegisterForm extends Component{
+  render(){
+    return (
+    
+      <div>
+        <h1>회원가입</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <input type="text" defaultValue = "아이디"></input></p>
+        <p>
+        <input type="text" defaultValue = "비밀번호"></input></p>
+        <p>
+        <input type="text" defaultValue = "비밀번호재확인"></input></p>
+        <p>
+        <input type="text" defaultValue = "이름"></input></p>
+        <p>
+        <input type="date"></input></p>
+        <p>
+        <input type="text" defaultValue = "휴대전화"></input></p>
+        <p>
+          <input type = "submit" defaultValue="가입하기"></input>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      </div>
+    );
+  }
+}
+
+// class Submit extends Component {
+//   render(){
+//     return (
+
+//     );
+//   }
+// }
+
+class App extends Component{
+  render(){
+    return (
+      <div className =  "App">
+        <RegisterForm></RegisterForm>
+      </div>
+    );
+  }
 }
 
 export default App;
